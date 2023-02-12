@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.navbar,
+.navbar-burger,
+.menu,
+.background {
+    position: fixed;
+}
+
+.background {
+    z-index: 1;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url("https://images.wallpaperscraft.com/image/single/books_library_shelves_138556_3840x2160.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+body.open .background {
+    filter: blur(20px);
+}
+
+.navbar {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding-left: 20px;
+    padding-right: 72px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background: #00154E;
+    color: #f9f9f9;
+}
+
+.navbar>button {
+    font-size: 28px;
+}
+
+.navbar-logo {
+    max-width: 100%;
+    height: 4.5vw;
+}
+
+.navbar-burger {
+    z-index: 4;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    background-image: url("https://raw.githubusercontent.com/frontend-joe/css-navbars/e4eece5d6db2b5ba905eed193ffef18075a6965e/navbar-3/assets/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.open .navbar-burger {
+    background-image: url("https://raw.githubusercontent.com/frontend-joe/css-navbars/e4eece5d6db2b5ba905eed193ffef18075a6965e/navbar-3/assets/close.svg")
+}
+
+.navbar-search::placeholder {
+    color: #a7a7a7;
+}
+
+.menu {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+body.open .menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu>a {
+    color: #f9f9f9;
+    font-size: 32px;
+    font-family: "Poppins";
+    text-decoration: none;
+}
+.menu>a:hover{
+    transform: scale(1.05);
+    transition: 540ms;
+    color: #d5ddf131;
+}
+body.open .menu>a {
+    animation: appear 0.3s both;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        translate: 0 50px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

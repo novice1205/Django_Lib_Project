@@ -1,0 +1,21 @@
+.member-content{
+    background-image: url(https://images5.alphacoders.com/659/thumb-1920-659155.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y:center;
+    margin-top: 72px;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: left;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.member-content>h1{
+    background-color: rgba(0, 0, 0, 0.69);;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}

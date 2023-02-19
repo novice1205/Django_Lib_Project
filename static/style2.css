@@ -1,11 +1,23 @@
+body{
+    overflow-x: hidden;
+}
+:root{
+    --primary-color: #000000ef;;
+    --secondary-color: #000000a2;
+
+}
+.darkmode{
+    --primary-color: #00154e;
+    --secondary-color:#00154e93;
+}
 .carousel{
-    margin: 84px 0;
+    margin: 80px 0;
     max-width: 100%;
     height: auto;
 
 }
 .carousel-inner{
-    border-color: #00154E;
+    border-color: var(--primary-color);
     border-style: solid;
     border-width: 25px;
     border-radius: 5px;
@@ -69,7 +81,7 @@
   transition: opacity 0s 500ms;
 }
 .containerone,.containertwo{
-    background-color: #00154e93;
+    background-color: var(--secondary-color); 
     height: fit-content;
     width: 90%;
     z-index: 2;
@@ -89,12 +101,12 @@ footer{
     color: antiquewhite;
     position: relative;
     z-index: 2;
-    background-color: #00154e93;
+    background-color: var(--secondary-color);
     margin-top: 75px;
     font-family: Poppins;
 }
 .bg-gray-100{
-    background-color: #00154e93;
+    background-color: var(--secondary-color);
 }
 .foot-items{
     color: antiquewhite;
